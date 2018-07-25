@@ -1,0 +1,36 @@
+2018-07-24 19:40:41  [ main:1781 ] - [ ERROR ]  java.io.IOException: Login failure for hive/indata-10-110-13-163.indata.com@INDATA.COM from keytab resource/hive.service.keytab: javax.security.auth.login.LoginException: Checksum failed
+	at org.apache.hadoop.security.UserGroupInformation.loginUserFromKeytab(UserGroupInformation.java:962)
+	at com.inspur.hive.test.HiveUtil.authentication(HiveUtil.java:68)
+	at com.inspur.hive.test.hiveAPI.main(hiveAPI.java:24)
+Caused by: javax.security.auth.login.LoginException: Checksum failed
+	at com.sun.security.auth.module.Krb5LoginModule.attemptAuthentication(Unknown Source)
+	at com.sun.security.auth.module.Krb5LoginModule.login(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at javax.security.auth.login.LoginContext.invoke(Unknown Source)
+	at javax.security.auth.login.LoginContext.access$000(Unknown Source)
+	at javax.security.auth.login.LoginContext$4.run(Unknown Source)
+	at javax.security.auth.login.LoginContext$4.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.login.LoginContext.invokePriv(Unknown Source)
+	at javax.security.auth.login.LoginContext.login(Unknown Source)
+	at org.apache.hadoop.security.UserGroupInformation.loginUserFromKeytab(UserGroupInformation.java:953)
+	... 2 more
+Caused by: KrbException: Checksum failed
+	at sun.security.krb5.internal.crypto.Aes128CtsHmacSha1EType.decrypt(Unknown Source)
+	at sun.security.krb5.internal.crypto.Aes128CtsHmacSha1EType.decrypt(Unknown Source)
+	at sun.security.krb5.EncryptedData.decrypt(Unknown Source)
+	at sun.security.krb5.KrbAsRep.decrypt(Unknown Source)
+	at sun.security.krb5.KrbAsRep.decryptUsingKeyTab(Unknown Source)
+	at sun.security.krb5.KrbAsReqBuilder.resolve(Unknown Source)
+	at sun.security.krb5.KrbAsReqBuilder.action(Unknown Source)
+	... 16 more
+Caused by: java.security.GeneralSecurityException: Checksum failed
+	at sun.security.krb5.internal.crypto.dk.AesDkCrypto.decryptCTS(Unknown Source)
+	at sun.security.krb5.internal.crypto.dk.AesDkCrypto.decrypt(Unknown Source)
+	at sun.security.krb5.internal.crypto.Aes128.decrypt(Unknown Source)
+	... 23 more
+
+ 
