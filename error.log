@@ -1,0 +1,25 @@
+2018-10-15 10:44:44  [ main:172 ] - [ ERROR ]  java.io.IOException: Login failure for hive/indata-10-110-13-125.indata.com@INDATA.COM from keytab resource/hive.service.keytab: javax.security.auth.login.LoginException: Unable to obtain password from user
+
+	at org.apache.hadoop.security.UserGroupInformation.loginUserFromKeytab(UserGroupInformation.java:962)
+	at com.inspur.hive.test.HiveUtil.authentication(HiveUtil.java:50)
+	at com.inspur.hive.test.hiveAPI.main(hiveAPI.java:24)
+Caused by: javax.security.auth.login.LoginException: Unable to obtain password from user
+
+	at com.sun.security.auth.module.Krb5LoginModule.promptForPass(Unknown Source)
+	at com.sun.security.auth.module.Krb5LoginModule.attemptAuthentication(Unknown Source)
+	at com.sun.security.auth.module.Krb5LoginModule.login(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at javax.security.auth.login.LoginContext.invoke(Unknown Source)
+	at javax.security.auth.login.LoginContext.access$000(Unknown Source)
+	at javax.security.auth.login.LoginContext$4.run(Unknown Source)
+	at javax.security.auth.login.LoginContext$4.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.login.LoginContext.invokePriv(Unknown Source)
+	at javax.security.auth.login.LoginContext.login(Unknown Source)
+	at org.apache.hadoop.security.UserGroupInformation.loginUserFromKeytab(UserGroupInformation.java:953)
+	... 2 more
+
+ 

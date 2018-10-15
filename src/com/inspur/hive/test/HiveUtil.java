@@ -16,8 +16,9 @@ import org.apache.hadoop.security.UserGroupInformation;
 
 public class HiveUtil {
 	private static Connection conn;
-	private static String HIVE_JDBC_URL = "jdbc:hive2://indata-10-110-13-164.indata.com:10000/default;principal=hive/indata-10-110-13-164.indata.com@INDATA.COM";
-	private static String principal = "hive/indata-10-110-13-163.indata.com@INDATA.COM";
+	
+	private static String HIVE_JDBC_URL = "jdbc:hive2://indata-10-110-13-125.indata.com:10000/default;principal=hive/indata-10-110-13-125.indata.com@INDATA.COM";
+	private static String principal = "hive/indata-10-110-13-125.indata.com@INDATA.COM";
 	private static String keytab = "resource/hive.service.keytab";
 	private static String krb5 = "resource/krb5.conf";
 	static Configuration conf = new Configuration();
